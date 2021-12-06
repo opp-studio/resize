@@ -24,4 +24,7 @@ extension ResizeExtension on num {
 
   /// Font size using rem [ResizeUtil.rem]
   double get rem => ResizeUtil().rem(this);
+
+  /// Max responsive size [ResizeUtil.ms]
+  double get ms => ResizeUtil().maxScale(this);
 }
