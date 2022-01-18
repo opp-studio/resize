@@ -27,4 +27,7 @@ extension ResizeExtension on num {
 
   /// Max responsive size [ResizeUtil.ms]
   double get ms => ResizeUtil().maxScale(this);
+
+  /// Small responsive size [ResizeUtil.ss]
+  double get ss => ResizeUtil().minScale(this);
 }

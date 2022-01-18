@@ -101,10 +101,11 @@ class ResizeUtil {
   /// Returns font size in rem based on the input and base size
   double rem(num input) => input * _base * textScaleFactor;
 
-  /// Returns the responsive size between width and height depending on screen orientation.
-  double maxScale(num input) => orientation == Orientation.portrait
-      ? max(height(input), width(input))
-      : height(input);
+  /// Returns the max responsive size between width and height.
+  double maxScale(num input) => max(height(input), width(input));
+
+  /// Returns the min responsive size between width and height.
+  double smallScale(num input) => min(height(input), width(input));
 
   /// Gives the font size in scalarPixels based on the input
   /// If [allowtextScaling] is set true it will returns a scalable font size
