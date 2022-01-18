@@ -107,6 +107,11 @@ class ResizeUtil {
   /// Returns the min responsive size between width and height.
   double smallScale(num input) => min(height(input), width(input));
 
+  /// Returns the min responsive size between width and height.
+  double responsiveScale(num input) => orientation == Orientation.portrait
+      ? max(height(input), width(input))
+      : min(height(input), width(input));
+
   /// Gives the font size in scalarPixels based on the input
   /// If [allowtextScaling] is set true it will returns a scalable font size
   /// If [allowtextScaling] is set false it will returns a non scalable font size

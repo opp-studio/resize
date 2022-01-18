@@ -30,4 +30,7 @@ extension ResizeExtension on num {
 
   /// Small responsive size [ResizeUtil.ss]
   double get ss => ResizeUtil().smallScale(this);
+
+  /// Responsive size [ResizeUtil.rs]
+  double get rs => ResizeUtil().responsiveScale(this);
 }
