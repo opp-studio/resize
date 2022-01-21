@@ -101,12 +101,6 @@ class ResizeUtil {
   /// Returns font size in rem based on the input and base size
   double rem(num input) => input * _base * textScaleFactor;
 
-  /// Returns the max responsive size between width and height.
-  double maxScale(num input) => max(height(input), width(input));
-
-  /// Returns the min responsive size between width and height.
-  double smallScale(num input) => min(height(input), width(input));
-
   /// Returns the min responsive size between width and height.
   double responsiveScale(num input) => orientation == Orientation.portrait
       ? max(height(input), width(input))
